@@ -1,0 +1,55 @@
+# Core dependencies
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+scipy>=1.10.0
+statsmodels>=0.14.0
+tqdm>=4.65.0
+pyyaml>=6.0
+matplotlib>=3.7.0
+plotly>=5.15.0
+
+# ML frameworks
+xgboost>=1.7.0
+lightgbm>=4.0.0
+catboost>=1.2.0
+torch>=2.0.0
+pytorch-lightning>=2.0.0
+
+# Time series and feature engineering
+tsfresh>=0.20.0
+pmdarima>=2.0.0
+
+# Portfolio and risk (for banking context)
+cvxpy>=1.3.0
+arch>=6.0.0
+
+# NLP (for customer communication analysis)
+transformers>=4.30.0
+datasets>=2.12.0
+beautifulsoup4>=4.12.0
+spacy>=3.6.0
+
+# Explainability
+shap>=0.42.0
+lime>=0.2.0
+
+# Visualization and demo
+streamlit>=1.25.0
+gradio>=3.40.0
+
+# Development tools
+black>=23.0.0
+ruff>=0.0.280
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pre-commit>=3.3.0
+
+# Optional tracking
+mlflow>=2.5.0
+wandb>=0.15.0
+
+# Optional serving
+fastapi>=0.100.0
+uvicorn>=0.22.0
+pydantic>=2.0.0

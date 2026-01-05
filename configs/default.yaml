@@ -1,0 +1,49 @@
+# Customer Churn Prediction Configuration
+
+project_name: "Customer Churn Prediction for Banks"
+version: "1.0.0"
+description: "Research demo for customer churn prediction in banking"
+project_root: "."
+assets_path: "assets"
+logs_path: "logs"
+
+# Data configuration
+data:
+  raw_data_path: "data/raw"
+  processed_data_path: "data/processed"
+  features_path: "data/features"
+  test_size: 0.2
+  validation_size: 0.2
+  random_state: 42
+  time_column: "date"
+  train_start_date: null
+  train_end_date: null
+  test_start_date: null
+  test_end_date: null
+  lookback_window: 90
+  feature_window: 90
+  label_window: 30
+
+# Model configuration
+model:
+  model_type: "xgboost"
+  n_estimators: 100
+  max_depth: 6
+  learning_rate: 0.1
+  subsample: 0.8
+  colsample_bytree: 0.8
+  early_stopping_rounds: 10
+  eval_metric: "auc"
+  random_state: 42
+  cv_folds: 5
+  cv_strategy: "stratified_kfold"
+
+# Evaluation configuration
+evaluation:
+  primary_metric: "auc"
+  secondary_metrics: ["precision", "recall", "f1", "precision_at_k"]
+  optimize_threshold: true
+  threshold_method: "youden"
+  retention_cost: 100.0
+  acquisition_cost: 500.0
+  false_positive_cost: 50.0
